@@ -1,0 +1,16 @@
+version: 5.1.0
+session: 67e57d614dc25283aa0872a9
+steps:
+  - prompt: Log in with the totp
+    commands:
+      - command: exec
+        output: totp
+        js: |
+          const { TOTP } = require("totp-generator"); 
+          let otp = TOTP.generate("JBSWY3DPEB3W64TMMQQQ").otp;
+          result = otp;
+      - command: exec
+        js: |
+          console.log("${OUTPUT.totp}");
+      - command: type
+        text: ${OUTPUT.totp}
