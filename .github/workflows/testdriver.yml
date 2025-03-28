@@ -13,16 +13,15 @@ jobs:
     steps:
       - uses: testdriverai/action@main
         with:
+          version: "5.1.0"
           key: ${{secrets.TESTDRIVER_API_KEY}}
           prompt: |
             1. /run testdriver/testdriver.yml
           prerun: |
             cd $env:TEMP
             npm init -y
-            npm install dashcam-chrome
-            Start-Process "C:/Program Files/Google/Chrome/Application/chrome.exe" -ArgumentList "--start-maximized", "--load-extension=$(pwd)/node_modules/dashcam-chrome/build", "${{ env.WEBSITE_URL }}"
+            npm install
             exit
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FORCE_COLOR: "3"
-          WEBSITE_URL: "https://example.com" # Define the website URL here
