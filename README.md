@@ -13,6 +13,9 @@ npm install
 testdriverai run testdriver/testdriver.yaml
 ```
 
+![CleanShot 2025-03-27 at 20 52 49@2x](https://github.com/user-attachments/assets/d6f5cbb4-b1b3-49b1-878c-dfcbfc3ce96f)
+
+
 ## How it works
 
 ### Params
