@@ -2,7 +2,9 @@
 
 Let's say you want to use some custom JS within your test to hit an API. 
 
-As of `5.1.0` you can call any NPM module with the `exec` command! This repo is a demo of running custom npm packages in TestDriver. 
+As of `5.1.0` you can execute any NodeJS script complete with NPM support using the `exec` command! 
+
+This repo is a demo of running custom npm packages in TestDriver. 
 
 ## Running this demo
 
